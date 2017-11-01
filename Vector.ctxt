@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Vector
+comment1.params=
+comment1.target=Vector()
+comment2.params=x\ y
+comment2.target=Vector(int,\ int)
+comment3.params=
+comment3.target=int\ get_x()
+comment4.params=
+comment4.target=int\ get_y()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

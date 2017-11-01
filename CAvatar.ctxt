@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CAvatar
+comment1.params=fileName\ x\ y\ z
+comment1.target=CAvatar(java.lang.String,\ int,\ int,\ int)
+comment2.params=x\ y\ z\ v\ map
+comment2.target=CAvatar(int,\ int,\ int,\ Vector,\ char[][])
+comment3.params=
+comment3.target=void\ animate()
+comment4.params=event
+comment4.target=void\ keyPressed(java.awt.event.KeyEvent)
+comment5.params=event
+comment5.target=void\ keyReleased(java.awt.event.KeyEvent)
+numComments=6

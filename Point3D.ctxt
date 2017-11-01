@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Point3D
+comment1.params=
+comment1.target=Point3D()
+comment2.params=x\ y
+comment2.target=Point3D(int,\ int)
+comment3.params=x\ y\ z
+comment3.target=Point3D(int,\ int,\ int)
+comment4.params=
+comment4.target=Point3D\ X_reflection()
+comment5.params=
+comment5.target=Point3D\ Y_reflection()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=p
+comment7.target=int\ compareTo(Point3D)
+comment8.params=args
+comment8.target=void\ main(java.lang.String[])
+numComments=9

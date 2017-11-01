@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=ISprite
+comment1.params=
+comment1.target=int\ get_x()
+comment2.params=
+comment2.target=int\ get_y()
+comment3.params=
+comment3.target=int\ get_z()
+comment4.params=
+comment4.target=char[][]\ get_map()
+comment5.params=
+comment5.target=Vector\ get_vector()
+comment6.params=
+comment6.target=void\ animate()
+comment7.params=x\ y\ s
+comment7.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment8.params=x\ y\ z
+comment8.target=boolean\ isClear(int,\ int,\ int)
+comment9.params=
+comment9.target=void\ rotate()
+numComments=10
