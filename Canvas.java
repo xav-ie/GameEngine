@@ -51,7 +51,7 @@ public class Canvas extends KeyAdapter
 
     public static SpriteArrayList get_SpritesAt(int x, int y)
     {
-        if (x > 0 && x < m_spriteMap.length && y > 0 && y < m_spriteMap[x].length) 
+        if (m_spriteMap != null && x > 0 && x < m_spriteMap.length && y > 0 && y < m_spriteMap[x].length) 
             return m_spriteMap[x][y];
         return null;
     }

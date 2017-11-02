@@ -1,8 +1,8 @@
  
 
-public class Ghost extends CSprite
+public class Bull extends CSprite
 {
-    public Ghost(int x, int y, int z, Vector v, char[][] map, int speed)
+    public Bull(int x, int y, int z, Vector v, char[][] map, int speed)
     {
         super(x,y,z,v,map, speed);
     }
