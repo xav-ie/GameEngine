@@ -9,7 +9,7 @@ public class CSprite implements ISprite, Comparable
     private int m_tick;
     protected int m_x, m_y, m_z;
     private int m_speed;
-    private char[][] m_map;
+    protected char[][] m_map;
 
     public CSprite(String fileName)
     {
@@ -164,8 +164,8 @@ public class CSprite implements ISprite, Comparable
             if (s != this)  // collision with some other sprite
             {
                 System.out.println(this+"poop");
-                Canvas.removeSprite(this); 
-                
+                //Canvas.removeSprite(this); 
+                //rotate();
                 //System.out.println("(" + x + "," + y + ")");
                 //System.out.println(s);
             }
@@ -183,8 +183,8 @@ public class CSprite implements ISprite, Comparable
                     for(CSprite s : sl)
                         if (s != this && s.get_z() == m_z)
                         {
-                            System.out.println(this+"peep");
-                            Canvas.removeSprite(this); 
+                            //System.out.println(this+"peep");
+                            //Canvas.removeSprite(this); 
                             
                             return false;
                         }

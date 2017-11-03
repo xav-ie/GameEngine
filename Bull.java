@@ -1,9 +1,9 @@
  
 public class Bull extends CSprite
 {
-    public Bull(int x, int y, int z, Vector v, char[][] map, int speed)
+    public Bull(int x, int y, int z, Vector v, int speed)
     {
-        super(x,y,z,v,map, speed);
+        super(x,y,z,v,new char[][]{{' ', '_', '(', '_', '_', ')', '_'}, {'\'', '-','0',' ',' ','0','-','\''},{' ','(','o','_','_','o',')',' '}}, speed);
     }
 
     public void collision(int x, int y, SpriteArrayList sList)
