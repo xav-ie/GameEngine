@@ -1,5 +1,4 @@
  
-
 public class Bull extends CSprite
 {
     public Bull(int x, int y, int z, Vector v, char[][] map, int speed)

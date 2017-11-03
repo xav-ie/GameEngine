@@ -1,4 +1,3 @@
- 
 
 public class Ghost extends CSprite
 {

@@ -121,7 +121,7 @@ public class Canvas extends KeyAdapter
         {
             try
             {
-                Thread.sleep(200);
+                Thread.sleep(100);
                 for(int i = 0; i< m_sprites.size(); i++)//For every Sprite
                 {
                     CSprite s = m_sprites.get(i);
