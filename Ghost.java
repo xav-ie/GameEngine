@@ -9,7 +9,7 @@ public class Ghost extends CSprite
     public void collision(int x, int y, SpriteArrayList sList)
     {
         for(CSprite s : sList)
-            if (s instanceof CAvatar)  // collion with some other sprite
+            if (s instanceof CSprite)  // collion with some other sprite
             {
                 Canvas.removeSprite(this);
                 System.out.println("Removing Ghost");

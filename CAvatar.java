@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 public class CAvatar extends CSprite
 {
     String m_fileName;
+    int m_counter = 0;
     public CAvatar(String fileName, int x, int y, int z)
     {
         super(fileName,x,y,z);
@@ -24,6 +25,13 @@ public class CAvatar extends CSprite
     public void animate()
     {
         // Leave this empty so avatar won't move automatically like Sprites
+        //m_counter++;
+        /*if (m_counter%10==0) 
+        {
+            m_counter=0;
+            CSprite s1 = new CSprite(6, 4, 0, new Vector(1, 0), new char[][]{{'1','2','3'}, {'4','5','6'}},2); 
+            Canvas.addSprite(s1);
+        }*/
     }
 
     public void keyPressed(KeyEvent event)

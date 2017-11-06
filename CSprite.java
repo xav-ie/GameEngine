@@ -163,7 +163,10 @@ public class CSprite implements ISprite, Comparable
         for(CSprite s : sList)
             if (s != this)  // collision with some other sprite
             {
-                System.out.println(this+"poop");
+                if (s instanceof Bull)
+                {
+                    Canvas.removeSprite(s);
+                }   
                 //Canvas.removeSprite(this); 
                 //rotate();
                 //System.out.println("(" + x + "," + y + ")");
