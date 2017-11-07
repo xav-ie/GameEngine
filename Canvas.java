@@ -24,7 +24,9 @@ public class Canvas extends KeyAdapter
         m_console = new GameConsole(m_width,m_height, this);
 
         m_console.setVisible(true);
-        addSprite(new CSprite(1,m_height -1 ,0,background.get_vector(),background.get_map()));
+        addSprite(new Background(1,m_height -1 ,0,background.get_vector(),background.get_map()));
+        
+        //addSprite(background);
     }
 
     public Canvas(int w, int h)

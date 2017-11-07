@@ -7,7 +7,7 @@ public class VideoGame
         Bull bull1 = new Bull(20, 10, 0, new Vector(1, 0),10);
 //        CAvatar a1 = new CAvatar(8, 4, 0, new Vector(0, 0), new char[][]{{'a',' ','c'}, {'d','e','f'}});
         CAvatar a1 = new CAvatar("Avatar.txt", 8,20,0);
-        CSprite b1 = new CSprite("background.txt");
+        Background b1 = new Background("background.txt");
         //CSprite p1
         //b1.set_vector(new Vector(0,0));
         Canvas can =  new Canvas(b1);

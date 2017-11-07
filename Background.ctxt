@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Background
+comment1.params=bg
+comment1.target=Background(java.lang.String)
+comment2.params=x\ y\ z\ v\ map
+comment2.target=Background(int,\ int,\ int,\ Vector,\ char[][])
+numComments=3
