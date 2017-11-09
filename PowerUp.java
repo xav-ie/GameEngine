@@ -20,7 +20,7 @@ public class PowerUp extends CSprite
             {
                 m_XMoving = false;
                 m_YMoving = false;
-                System.out.println("yeet");
+                if(m_XMoving&&m_YMoving) System.out.println("yeet");
             }
         }
     }

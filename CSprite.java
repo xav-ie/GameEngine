@@ -164,6 +164,7 @@ public class CSprite implements ISprite, Comparable
             if (s != this)  // collision with some other sprite
             {
                 if (s instanceof Bull) Canvas.removeSprite(s);
+                if(s instanceof Bullet) Canvas.removeSprite(s);
                 //if (s instanceof PowerUp) Canvas.removeSprite(s);
                 //Canvas.removeSprite(this); 
                 //rotate();

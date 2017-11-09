@@ -42,20 +42,17 @@ public class CAvatar extends CSprite
         int keyCode = event.getKeyCode();
         if (keyCode == event.VK_SPACE)
         {
-
             //int y = m_vector.get_y();
             int x = (m_vector.get_x()<0) ? -2 : 7;
             if(m_vector.get_y()!=0) x = -2; //if it is going to shoot up/down, make the ullet spawn by the beak
 
-            CSprite s = new CSprite("Sprite1.txt",     // filename
+            Bullet b = new Bullet("Sprite1.txt",     // filename
                     m_x + x + get_map().length/2,      // x coord of center of our shape
                     m_y + 4 + - get_map()[0].length/2, // y coord of center of our shape
                     m_z); 
-            s.set_vector(m_vector);                    // send in the same direction we are going
-            s.set_speed(1);
-
-            Canvas.addSprite(s);
-
+            b.set_vector(m_vector);                    // send in the same direction we are going
+            b.set_speed(1);
+            Canvas.addSprite(b);
         }
         if (keyCode == event.VK_LEFT)
         {
