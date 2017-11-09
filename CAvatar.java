@@ -33,18 +33,26 @@ public class CAvatar extends CSprite
             Canvas.addSprite(s1);
         }*/
     }
-
+    boolean facingRight = false;
     public void keyPressed(KeyEvent event)
     {
         int new_x = m_x;
         int new_y = m_y;
-
+        
         int keyCode = event.getKeyCode();
         if (keyCode == event.VK_SPACE)
         {
             //int y = m_vector.get_y();
             int x = (m_vector.get_x()<0) ? -2 : 7;
-            if(m_vector.get_y()!=0) x = -2; //if it is going to shoot up/down, make the ullet spawn by the beak
+            if(m_vector.get_y()!=0) //if it is going to shoot up/down, make the ullet spawn by the beak
+            {
+                if (facingRight) {
+                    x = 7;
+                } else {
+                    x = -2;
+                }
+            }
+            
 
             Bullet b = new Bullet("Sprite1.txt",     // filename
                     m_x + x + get_map().length/2,      // x coord of center of our shape
@@ -58,12 +66,14 @@ public class CAvatar extends CSprite
         {
             if(m_fileName!=null) setMap(m_fileName+"Left.txt");
             m_vector = new Vector(-1,0);
+            facingRight = false;
             new_x--;
         }
         if (keyCode == event.VK_RIGHT)
         {
             if(m_fileName!=null) setMap(m_fileName+"Right.txt");
             m_vector = new Vector(1,0);
+            facingRight = true;
             new_x++;
         }
         if (keyCode == event.VK_UP)

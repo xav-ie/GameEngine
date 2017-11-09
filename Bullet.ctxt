@@ -2,6 +2,10 @@
 comment0.target=Bullet
 comment1.params=fileName\ x\ y\ z
 comment1.target=Bullet(java.lang.String,\ int,\ int,\ int)
-comment2.params=x\ y\ sList
-comment2.target=void\ collision(int,\ int,\ SpriteArrayList)
-numComments=3
+comment2.params=fileName\ x\ y\ z\ damage
+comment2.target=Bullet(java.lang.String,\ int,\ int,\ int,\ int)
+comment3.params=x\ y\ sList
+comment3.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment4.params=
+comment4.target=int\ getDamage()
+numComments=5

@@ -2,6 +2,14 @@
 comment0.target=Duck
 comment1.params=fileName\ x\ y\ z
 comment1.target=Duck(java.lang.String,\ int,\ int,\ int)
-comment2.params=x\ y\ sList
-comment2.target=void\ collision(int,\ int,\ SpriteArrayList)
-numComments=3
+comment2.params=fileName\ x\ y\ z\ lives\ health
+comment2.target=Duck(java.lang.String,\ int,\ int,\ int,\ int,\ int)
+comment3.params=x\ y\ sList
+comment3.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment4.params=points
+comment4.target=void\ hit(int)
+comment5.params=
+comment5.target=int\ getHealth()
+comment6.params=
+comment6.target=int\ getLives()
+numComments=7

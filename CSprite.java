@@ -11,10 +11,7 @@ public class CSprite implements ISprite, Comparable
     private int m_speed;
     protected char[][] m_map;
 
-    public CSprite(String fileName)
-    {
-        this(fileName, 0,0,0);
-    }
+    public CSprite(String fileName){this(fileName, 0,0,0);}
 
     public CSprite(String fileName, int x, int y, int z)
     {
@@ -27,7 +24,6 @@ public class CSprite implements ISprite, Comparable
         try
         {
             content = new String(Files.readAllBytes(Paths.get(fileName)));
-
         } catch (IOException e)
         {
             content = e.toString();
@@ -51,31 +47,15 @@ public class CSprite implements ISprite, Comparable
         m_vector = new Vector();
     }    
 
-    public CSprite()
-    {
-        this(0,0,0,new Vector());
-    }
+    public CSprite(){this(0,0,0,new Vector());}
 
-    public CSprite(int x, int y)
-    {
-        this(x,y,0,new Vector());
-    }
+    public CSprite(int x, int y){this(x,y,0,new Vector());}
 
-    public CSprite(int x, int y, int z)
-    {
+    public CSprite(int x, int y, int z){this(x,y,z,new Vector());}
 
-        this(x,y,z,new Vector());
-    }
+    public CSprite(int x, int y, int z, Vector v){this(x, y, z, v, new char[][]{{'*'}});}
 
-    public CSprite(int x, int y, int z, Vector v)
-    {
-        this(x, y, z, v, new char[][]{{'*'}});
-    }
-
-    public CSprite(int x, int y, int z, Vector v, char[][] map)
-    {
-        this(x, y, z, v, map, 1);
-    }
+    public CSprite(int x, int y, int z, Vector v, char[][] map){this(x, y, z, v, map, 1);}
 
     public CSprite(int x, int y, int z, Vector v, char[][] map, int speed)
     {
@@ -103,12 +83,7 @@ public class CSprite implements ISprite, Comparable
     public int get_x(){ return m_x; }
     public int get_y(){ return m_y; }
     public int get_z(){return m_z;}
-
-    public char[][] get_map()
-    {
-        return m_map;
-    }
-
+    public char[][] get_map(){return m_map;}
     public Vector get_vector() { return m_vector;}
     public void set_vector(Vector v) { m_vector = v;};
 
@@ -163,7 +138,7 @@ public class CSprite implements ISprite, Comparable
         for(CSprite s : sList)
             if (s != this)  // collision with some other sprite
             {
-                if (s instanceof Bull) Canvas.removeSprite(s);
+                //if (s instanceof Bull) Canvas.removeSprite(s);
                 if(s instanceof Bullet) Canvas.removeSprite(s);
                 //if (s instanceof PowerUp) Canvas.removeSprite(s);
                 //Canvas.removeSprite(this); 
@@ -187,29 +162,24 @@ public class CSprite implements ISprite, Comparable
                         {
                             //System.out.println(this+"peep");
                             //Canvas.removeSprite(this); 
-                            
                             return false;
                         }
                 }
             }
         return true;
     }
-  
     
     public int compareTo(Object o1)
     {
         if (o1 instanceof CSprite)
         {
-            if(this.get_z() > ((CSprite)o1).get_z())
-                return 1;
-            if(this.get_z() == ((CSprite)o1).get_z())
-                return 0;
-            if(this.get_z() < ((CSprite)o1).get_z())
-                return -1;
+            if(this.get_z() > ((CSprite)o1).get_z())return 1;
+            if(this.get_z() == ((CSprite)o1).get_z())return 0;
+            if(this.get_z() < ((CSprite)o1).get_z())return -1;
         }
         return 0;
     }
 
 }
 
-class SpriteArrayList extends ArrayList<CSprite> { }
+class SpriteArrayList extends ArrayList<CSprite> {}

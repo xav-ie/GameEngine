@@ -22,10 +22,9 @@ public class Canvas extends KeyAdapter
 
         m_sprites = new ArrayList<CSprite>();
         m_console = new GameConsole(m_width,m_height, this);
-
-        m_console.setVisible(true);
-        addSprite(new Background(1,m_height -1 ,0,background.get_vector(),background.get_map()));
         
+        m_console.setVisible(true);
+        this.addSprite(new Background(1,m_height -1 ,0,background.get_vector(),background.get_map()));
         //addSprite(background);
     }
 
@@ -152,7 +151,15 @@ public class Canvas extends KeyAdapter
             if (m_sprites.get(i) instanceof CAvatar)
                 ((CAvatar) m_sprites.get(i)).keyPressed(event);
         }
-        draw();
+        try 
+        {
+            draw();
+        } 
+        catch (Exception e)
+        {
+            //System.out.println("Drawing Exception: ");
+            //System.out.println(e);
+        }
     }
 
     @Override

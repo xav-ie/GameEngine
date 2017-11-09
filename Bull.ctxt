@@ -2,8 +2,12 @@
 comment0.target=Bull
 comment1.params=x\ y\ z\ v\ speed
 comment1.target=Bull(int,\ int,\ int,\ Vector,\ int)
-comment2.params=x\ y\ sList
-comment2.target=void\ collision(int,\ int,\ SpriteArrayList)
-comment3.params=
-comment3.target=void\ animate()
-numComments=4
+comment2.params=x\ y\ z\ v\ speed\ damage
+comment2.target=Bull(int,\ int,\ int,\ Vector,\ int,\ int)
+comment3.params=x\ y\ sList
+comment3.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment4.params=
+comment4.target=void\ animate()
+comment5.params=
+comment5.target=int\ getDamage()
+numComments=6
