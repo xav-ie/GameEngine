@@ -2,8 +2,12 @@
 comment0.target=PowerUp
 comment1.params=x\ y\ z\ v\ map\ speed
 comment1.target=PowerUp(int,\ int,\ int,\ Vector,\ char[][],\ int)
-comment2.params=x\ y\ sList
-comment2.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment2.params=x\ y\ z\ v\ type\ speed
+comment2.target=PowerUp(int,\ int,\ int,\ Vector,\ java.lang.String,\ int)
 comment3.params=
-comment3.target=void\ animate()
-numComments=4
+comment3.target=java.lang.String\ getType()
+comment4.params=x\ y\ sList
+comment4.target=void\ collision(int,\ int,\ SpriteArrayList)
+comment5.params=
+comment5.target=void\ animate()
+numComments=6

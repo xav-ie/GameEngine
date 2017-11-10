@@ -27,6 +27,18 @@ public class Duck extends CAvatar
                     this.hit(10);
                     Canvas.removeSprite(s);
                 }
+                if (s instanceof PowerUp)
+                {
+                    if (s.getType()=="tiny") 
+                    {
+                        int x1 = m_x;
+                        int y1 = m_y;
+                        int z1 = m_z;
+                        Canvas.removeSprite(this);
+                        Duck d2 = new Duck("avatartiny.txt", x1,y1,z1, m_lives, m_health);
+                        Canvas.addSprite(d2);
+                    }
+                }
             }
     }
     public void hit(int points)

@@ -24,9 +24,8 @@ public class GameConsole extends JFrame {
     private JTextField m_textField;
     private JTextArea m_textArea;
 
-    /**
-     * Create the frame.
-     */
+    
+    // Create the frame. 
     public GameConsole(int width, int height, Canvas c)
     {
         setForeground(Color.WHITE);
@@ -61,7 +60,7 @@ public class GameConsole extends JFrame {
                 .addPreferredGap(ComponentPlacement.RELATED)
                 .addComponent(m_textField, GroupLayout.PREFERRED_SIZE, 5, GroupLayout.PREFERRED_SIZE))
         );
-
+        this.setSize(771,751);
         m_textArea = new JTextArea();
         m_textArea.setBackground(Color.BLACK);
         m_textArea.setForeground(Color.WHITE);

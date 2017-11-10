@@ -83,6 +83,8 @@ public class CSprite implements ISprite, Comparable
     public int get_x(){ return m_x; }
     public int get_y(){ return m_y; }
     public int get_z(){return m_z;}
+    public String getCoords(){return "("+m_x+", "+m_y+", "+m_z+")";}
+    public int[] coords(){return new int[]{m_z, m_y, m_z};}
     public char[][] get_map(){return m_map;}
     public Vector get_vector() { return m_vector;}
     public void set_vector(Vector v) { m_vector = v;};
@@ -117,7 +119,8 @@ public class CSprite implements ISprite, Comparable
             m_x += m_vector.get_x();
         }
     }
-
+    
+    public String getType() {return "None";}
     public void rotate()
     {
         int height = m_map.length;

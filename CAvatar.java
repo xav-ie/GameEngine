@@ -53,10 +53,10 @@ public class CAvatar extends CSprite
                 }
             }
             
-
+            int y = (get_map()[0].length==6) ? 3 : 4;
             Bullet b = new Bullet("Sprite1.txt",     // filename
                     m_x + x + get_map().length/2,      // x coord of center of our shape
-                    m_y + 4 + - get_map()[0].length/2, // y coord of center of our shape
+                    m_y + y + - get_map()[0].length/2, // y coord of center of our shape
                     m_z); 
             b.set_vector(m_vector);                    // send in the same direction we are going
             b.set_speed(1);

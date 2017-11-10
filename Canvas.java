@@ -170,6 +170,14 @@ public class Canvas extends KeyAdapter
             if (m_sprites.get(i) instanceof CAvatar)
                 ((CAvatar) m_sprites.get(i)).keyReleased(event);
         }
-        draw();
+        try
+        {
+            draw();
+        } 
+        catch (Exception e)
+        {
+            //System.out.println("Drawing Exception: ");
+            //System.out.println(e);
+        }
     }
 }
