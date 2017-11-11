@@ -32,6 +32,7 @@ public class CAvatar extends CSprite
             CSprite s1 = new CSprite(6, 4, 0, new Vector(1, 0), new char[][]{{'1','2','3'}, {'4','5','6'}},2); 
             Canvas.addSprite(s1);
         }*/
+        
     }
     boolean facingRight = false;
     public void keyPressed(KeyEvent event)
@@ -54,6 +55,7 @@ public class CAvatar extends CSprite
             }
             
             int y = (get_map()[0].length==6) ? 3 : 4;
+
             Bullet b = new Bullet("Sprite1.txt",     // filename
                     m_x + x + get_map().length/2,      // x coord of center of our shape
                     m_y + y + - get_map()[0].length/2, // y coord of center of our shape
