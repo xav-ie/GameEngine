@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Scoreboard
+comment1.params=label\ x\ y\ z
+comment1.target=Scoreboard(java.lang.String,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ reset()
+comment3.params=points
+comment3.target=void\ add(int)
+comment4.params=
+comment4.target=void\ updateScore()
+numComments=5
