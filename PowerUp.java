@@ -17,6 +17,8 @@ public class PowerUp extends CSprite
         if (type=="fast") m_map = new char[][]{{'>','>','>'},{'>','>','>'}};
         if (type=="slow") m_map = new char[][]{{'<','<','<'},{'<','<','<'}};
         if (type=="invincible") m_map = new char[][]{{' ','_',' '},{'|','_','|'}};
+        if (type=="life") m_map = new char[][]{{'(',' ','`','\\','/','\'','*',')'},{' ','\\',' ',' ',' ',' ','/',' '},{' ',' ','`','\\','/','\'',' ',' '}};
+        
     }
 
     public String getType() {return m_type;}
