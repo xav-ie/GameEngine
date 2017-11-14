@@ -6,11 +6,14 @@ public class Duck extends CAvatar
     int m_counter = 0;
     int m_powerUpCounter = 0;
     String m_currentPowerUp = "";
+    
+    
     public Duck(String fileName, int x, int y, int z)
     {
         super(fileName,x,y,z);
         m_lives = 3;
         m_health = 100;
+        
     }
 
     public Duck(String fileName, int x, int y, int z, int lives, int health)
@@ -18,6 +21,7 @@ public class Duck extends CAvatar
         super(fileName,x,y,z);
         m_lives = lives;
         m_health = health;
+        
     }
 
     public void collision(int x, int y, SpriteArrayList sList)
@@ -33,6 +37,7 @@ public class Duck extends CAvatar
                 }
                 if (s instanceof PowerUp)
                 {
+                    Canvas.get_Scoreboard().add(5);
                     if (s.getType().equals("tiny")) 
                     {
                         int x1 = m_x;
@@ -42,6 +47,7 @@ public class Duck extends CAvatar
                         Duck d1 = new Duck("avatartiny.txt", x1,y1,z1, m_lives, m_health);
                         d1.setPowerUp("tiny");
                         Canvas.addSprite(d1);
+                        
                     }
                     if (s.getType().equals("life")) 
                     {
@@ -50,6 +56,7 @@ public class Duck extends CAvatar
                     if (s.getType().equals("fast")) 
                     {
                         m_lives+=1;
+                        
                     }
                     if (s.getType().equals("slow")) 
                     {
@@ -84,14 +91,15 @@ public class Duck extends CAvatar
     {
         // Leave this empty so avatar won't move automatically like Sprites
         /*m_counter++;
-        if (m_counter%10==0) 
+        if (m_counter%20==0) 
         {
         //m_counter=0;
         //PowerUp p = new PowerUp(12, 12, 1, new Vector(1, 1), "tiny",10);
         //Canvas.addSprite(p);
+        this.rotate();
         }*/
         m_powerUpCounter++;
-        if (m_powerUpCounter%40==0) 
+        if (m_powerUpCounter%10==0) 
         {
             m_powerUpCounter = 0;
             // Now reverse effects for each different PowerUp

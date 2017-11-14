@@ -50,6 +50,16 @@ public class Canvas extends KeyAdapter
         return null;
     }
 
+    public static Scoreboard get_Scoreboard()
+    {
+        for(CSprite c : m_sprites)
+        {
+            if (c instanceof Scoreboard)
+                return (Scoreboard) c;
+        }
+        return null;
+    }
+
     public static SpriteArrayList get_SpritesAt(int x, int y)
     {
         if (m_spriteMap != null && x > 0 && x < m_spriteMap.length && y > 0 && y < m_spriteMap[x].length) 
