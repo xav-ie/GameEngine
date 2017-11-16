@@ -3,7 +3,7 @@ public class Bull extends CSprite
 {
     int m_damage = 10;
     String m_type = "classic";
-    int m_health = 100;
+    int m_health = 30;
     int m_counter = 0;
     public Bull(int x, int y, int z, Vector v, int speed)
     {

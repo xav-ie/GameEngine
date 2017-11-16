@@ -2,9 +2,7 @@
 public class Duck extends CAvatar
 
 {
-    private int m_health, m_lives, m_speed;
-    int m_counter = 0;
-    int m_powerUpCounter = 0;
+    private int m_health, m_lives, m_speed, m_tick, m_counter, m_powerUpCounter;
     String m_currentPowerUp = "";
     
     
@@ -13,7 +11,7 @@ public class Duck extends CAvatar
         super(fileName,x,y,z);
         m_lives = 3;
         m_health = 100;
-        
+        set_speed(57);
     }
 
     public Duck(String fileName, int x, int y, int z, int lives, int health)
@@ -21,7 +19,7 @@ public class Duck extends CAvatar
         super(fileName,x,y,z);
         m_lives = lives;
         m_health = health;
-        
+        set_speed(40);
     }
 
     public void collision(int x, int y, SpriteArrayList sList)
@@ -65,6 +63,10 @@ public class Duck extends CAvatar
                     if (s.getType().equals("invincible")) 
                     {
                         m_lives+=1;
+                    }
+                    if (s.getType().equals("randomkill")) 
+                    {
+                        if(Canvas.get_Enemies().size()>0) Canvas.removeSprite(Canvas.get_Enemies().get(0));
                     }
                 }
             }

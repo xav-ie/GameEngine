@@ -49,6 +49,13 @@ public class Canvas extends KeyAdapter
         }
         return null;
     }
+    
+    public static ArrayList<Bull> get_Enemies()
+    {
+        ArrayList temp = new ArrayList();
+        for(CSprite c : m_sprites) if (c instanceof Bull) temp.add((Bull)c);
+        return temp;
+    }
 
     public static Scoreboard get_Scoreboard()
     {
@@ -75,6 +82,11 @@ public class Canvas extends KeyAdapter
 
     public static void removeSprite(CSprite c)
     {
+        if (c instanceof Bull || c instanceof Duck) 
+        {
+            Poof p1 = new Poof(c.get_x(), c.get_y(), 10);
+            Canvas.addSprite(p1);
+        }
         m_sprites.remove(c);   
     }
 

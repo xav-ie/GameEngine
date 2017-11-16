@@ -71,6 +71,7 @@ public class CSprite implements ISprite, Comparable
             case 2:
             case 5:
             case 10:
+            case 40:
             m_speed = speed;
             break;
             default:
